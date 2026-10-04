@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Designer Management Dashboard</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 10 10%22><rect width=%2210%22 height=%2210%22 rx=%232%22 fill=%22%231f6bff%22/></svg>">
+<link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+<div id="auth" class="auth-wrap" hidden></div>
+<div id="shell" hidden>
+  <aside id="side"><div class="logo" id="logo"><span class="mk"></span><b>Designer OS</b></div><nav id="nav"></nav></aside>
+  <div id="col">
+    <header>
+      <button data-act="menu" class="ic burger">☰</button>
+      <input id="q" type="search">
+      <select id="quick"></select>
+      <span id="userBadge" class="user-badge"></span>
+      <button class="ic" data-act="lang">ع/EN</button>
+      <button class="ic" data-act="theme">🌙/☀️</button>
+      <button class="ic logout-btn" data-act="logout">خروج</button>
+    </header>
+    <main id="main"></main>
+  </div>
+</div>
+<dialog id="dlg"></dialog>
+<div id="toast"></div>
+<script type="module" src="./src/app.js"></script>
+</body>
+</html>
