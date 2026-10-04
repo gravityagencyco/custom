@@ -1,12 +1,13 @@
-import { createClient } from '@supabase/supabase-js';
+iimport { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 
-const url = import.meta.env.VITE_SUPABASE_URL;
-const key = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+const url = 'https://absqkaxcadexjlihlzfg.supabase.co';
 
-if (!url || !key) {
-  console.warn('Missing VITE_SUPABASE_URL or VITE_SUPABASE_PUBLISHABLE_KEY. Create a .env file from .env.example.');
-}
+const key = 'sb_publishable_96AohkOE7VLdRKVsAFPyoQ_xz39cUmx';
 
-export const supabase = createClient(url || 'https://invalid.local', key || 'invalid', {
-  auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
+export const supabase = createClient(url, key, {
+  auth: {
+    persistSession: true,
+    autoRefreshToken: true,
+    detectSessionInUrl: true
+  }
 });
